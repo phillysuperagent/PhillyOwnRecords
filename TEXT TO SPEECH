@@ -1,0 +1,12 @@
+
+from murf import Murf
+
+client = Murf(api_key="YOUR_API_KEY")
+
+response = client.text_to_speech.generate(
+  voice_id = "Natalie",
+  text = "Welcome to our Lean Manufacturing Techniques course! In this session, we will cover the core principles of lean, helping you boost efficiency.",
+  locale = "en-US"
+)
+
+print(response.audio_file)
